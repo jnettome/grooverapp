@@ -13,6 +13,10 @@
 		D465953C161BBAB300B8928C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D465953A161BBAB300B8928C /* Credits.rtf */; };
 		D465953F161BBAB300B8928C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D465953E161BBAB300B8928C /* AppDelegate.m */; };
 		D4659542161BBAB300B8928C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4659540161BBAB300B8928C /* MainMenu.xib */; };
+		D4659549161BBADF00B8928C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4659548161BBADF00B8928C /* WebKit.framework */; };
+		D465955B161BCDA600B8928C /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D465955A161BCDA600B8928C /* Carbon.framework */; };
+		D465955F161BCE1500B8928C /* NSObject+SPInvocationGrabbing.m in Sources */ = {isa = PBXBuildFile; fileRef = D465955E161BCE1500B8928C /* NSObject+SPInvocationGrabbing.m */; };
+		D4659568161BCFEA00B8928C /* SPMediaKeyTap.m in Sources */ = {isa = PBXBuildFile; fileRef = D465954C161BC90C00B8928C /* SPMediaKeyTap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,12 @@
 		D465953D161BBAB300B8928C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D465953E161BBAB300B8928C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D4659541161BBAB300B8928C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D4659548161BBADF00B8928C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D465954B161BC90C00B8928C /* SPMediaKeyTap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMediaKeyTap.h; sourceTree = "<group>"; };
+		D465954C161BC90C00B8928C /* SPMediaKeyTap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMediaKeyTap.m; sourceTree = "<group>"; };
+		D465955A161BCDA600B8928C /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		D465955D161BCE1500B8928C /* NSObject+SPInvocationGrabbing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPInvocationGrabbing.h"; sourceTree = "<group>"; };
+		D465955E161BCE1500B8928C /* NSObject+SPInvocationGrabbing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPInvocationGrabbing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D465955B161BCDA600B8928C /* Carbon.framework in Frameworks */,
+				D4659549161BBADF00B8928C /* WebKit.framework in Frameworks */,
 				D465952C161BBAB300B8928C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +75,8 @@
 		D465952A161BBAB300B8928C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4659548161BBADF00B8928C /* WebKit.framework */,
+				D465955A161BCDA600B8928C /* Carbon.framework */,
 				D465952B161BBAB300B8928C /* Cocoa.framework */,
 				D465952D161BBAB300B8928C /* Other Frameworks */,
 			);
@@ -82,9 +96,12 @@
 		D4659531161BBAB300B8928C /* grooverapp */ = {
 			isa = PBXGroup;
 			children = (
+				D465955C161BCE1500B8928C /* SPInvocationGrabbing */,
+				D465954B161BC90C00B8928C /* SPMediaKeyTap.h */,
+				D465954C161BC90C00B8928C /* SPMediaKeyTap.m */,
 				D465953D161BBAB300B8928C /* AppDelegate.h */,
 				D465953E161BBAB300B8928C /* AppDelegate.m */,
-				D4659540161BBAB300B8928C /* MainMenu.xib */,
+				D465954A161BBB0B00B8928C /* Interfaces */,
 				D4659532161BBAB300B8928C /* Supporting Files */,
 			);
 			path = grooverapp;
@@ -100,6 +117,23 @@
 				D465953A161BBAB300B8928C /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D465954A161BBB0B00B8928C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D4659540161BBAB300B8928C /* MainMenu.xib */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		D465955C161BCE1500B8928C /* SPInvocationGrabbing */ = {
+			isa = PBXGroup;
+			children = (
+				D465955D161BCE1500B8928C /* NSObject+SPInvocationGrabbing.h */,
+				D465955E161BCE1500B8928C /* NSObject+SPInvocationGrabbing.m */,
+			);
+			path = SPInvocationGrabbing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +202,8 @@
 			files = (
 				D4659538161BBAB300B8928C /* main.m in Sources */,
 				D465953F161BBAB300B8928C /* AppDelegate.m in Sources */,
+				D465955F161BCE1500B8928C /* NSObject+SPInvocationGrabbing.m in Sources */,
+				D4659568161BCFEA00B8928C /* SPMediaKeyTap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +293,7 @@
 		D4659546161BBAB300B8928C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "grooverapp/grooverapp-Prefix.pch";
@@ -269,6 +306,7 @@
 		D4659547161BBAB300B8928C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "grooverapp/grooverapp-Prefix.pch";
