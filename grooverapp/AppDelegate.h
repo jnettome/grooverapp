@@ -7,9 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
+#import "SPMediaKeyTap.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface GrooverApp : NSApplication
+@end
+
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    SPMediaKeyTap *keyTap;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet WebView *navigator;
 
 @end
