@@ -35,6 +35,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [navigator setFrameLoadDelegate:self];
+    [navigator setCustomUserAgent: @"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"];
+    
     NSURL* url = [NSURL URLWithString:@"http://grooveshark.com"];
     [[navigator mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
     
@@ -57,16 +59,16 @@
 	if (keyIsPressed) {
 		switch (keyCode) {
 			case NX_KEYTYPE_PLAY:
-                [navigator stringByEvaluatingJavaScriptFromString:@"document.getElementById('player_play_pause').click();"];
+                [navigator stringByEvaluatingJavaScriptFromString:@"document.getElementById('play-pause').click();"];
 				break;
                 
 			case NX_KEYTYPE_FAST:
-                [navigator stringByEvaluatingJavaScriptFromString:@"document.getElementById('player_next').click();"];
+                [navigator stringByEvaluatingJavaScriptFromString:@"document.getElementById('play-next').click();"];
                 [self notificateUser];
 				break;
                 
 			case NX_KEYTYPE_REWIND:
-                [navigator stringByEvaluatingJavaScriptFromString:@"document.getElementById('player_previous').click();"];
+                [navigator stringByEvaluatingJavaScriptFromString:@"document.getElementById('play-prev').click();"];
                 [self notificateUser];
 				break;
 		}
@@ -77,9 +79,9 @@
 {
     if(NSClassFromString(@"NSUserNotification"))
     {
-        NSString *musicName = [navigator stringByEvaluatingJavaScriptFromString:@"document.querySelector('#playerDetails_current_song .song').innerHTML;"];
-        NSString *musicAuthor = [navigator stringByEvaluatingJavaScriptFromString:@"document.querySelector('#playerDetails_current_song .artist').innerHTML;"];
-        NSString *musicAlbum = [navigator stringByEvaluatingJavaScriptFromString:@"document.querySelector('#playerDetails_current_song .album').innerHTML;"];
+        NSString *musicName = [navigator stringByEvaluatingJavaScriptFromString:@"document.querySelector('.now-playing-link.song').innerHTML;"];
+        NSString *musicAuthor = [navigator stringByEvaluatingJavaScriptFromString:@"document.querySelector('.now-playing-link.artist').innerHTML;"];
+        NSString *musicAlbum = [navigator stringByEvaluatingJavaScriptFromString:@"document.querySelector('.now-playing-link.album').innerHTML;"];
         
         NSUserNotification *notification = [NSUserNotification new];
         notification.hasActionButton = NO;

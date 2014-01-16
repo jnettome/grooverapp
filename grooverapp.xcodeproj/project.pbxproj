@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F8BE1861888614F00175878 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F8BE1851888614F00175878 /* Images.xcassets */; };
 		D465952C161BBAB300B8928C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D465952B161BBAB300B8928C /* Cocoa.framework */; };
 		D4659536161BBAB300B8928C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4659534161BBAB300B8928C /* InfoPlist.strings */; };
 		D4659538161BBAB300B8928C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4659537161BBAB300B8928C /* main.m */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F8BE1851888614F00175878 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D4659527161BBAB300B8928C /* grooverapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grooverapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D465952B161BBAB300B8928C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D465952E161BBAB300B8928C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -55,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F8BE1871888621600175878 /* SPMediaKeyTap */ = {
+			isa = PBXGroup;
+			children = (
+				D465954B161BC90C00B8928C /* SPMediaKeyTap.h */,
+				D465954C161BC90C00B8928C /* SPMediaKeyTap.m */,
+			);
+			name = SPMediaKeyTap;
+			sourceTree = "<group>";
+		};
 		D465951C161BBAB200B8928C = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				D465955C161BCE1500B8928C /* SPInvocationGrabbing */,
-				D465954B161BC90C00B8928C /* SPMediaKeyTap.h */,
-				D465954C161BC90C00B8928C /* SPMediaKeyTap.m */,
+				3F8BE1871888621600175878 /* SPMediaKeyTap */,
 				D465953D161BBAB300B8928C /* AppDelegate.h */,
 				D465953E161BBAB300B8928C /* AppDelegate.m */,
 				D465954A161BBB0B00B8928C /* Interfaces */,
+				3F8BE1851888614F00175878 /* Images.xcassets */,
 				D4659532161BBAB300B8928C /* Supporting Files */,
 			);
 			path = grooverapp;
@@ -188,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4659536161BBAB300B8928C /* InfoPlist.strings in Resources */,
+				3F8BE1861888614F00175878 /* Images.xcassets in Resources */,
 				D465953C161BBAB300B8928C /* Credits.rtf in Resources */,
 				D4659542161BBAB300B8928C /* MainMenu.xib in Resources */,
 			);
@@ -293,6 +305,7 @@
 		D4659546161BBAB300B8928C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -306,6 +319,7 @@
 		D4659547161BBAB300B8928C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -335,6 +349,7 @@
 				D4659547161BBAB300B8928C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
