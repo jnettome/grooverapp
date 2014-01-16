@@ -18,3 +18,7 @@ Simply extract grooverapp.zip and drop grooverapp into Applications Folder.
 ### contribute
 
 Creating issues, proposing features, writing code :)
+
+---
+
+icon by Vicente Sledz for [the noun project](http://thenounproject.com/term/rock-n-roll/1468/)
